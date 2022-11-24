@@ -1,56 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>To Do App</title>
-</head>
+  </head>
 
-<body>
-    <header>
-        <h1>TO DO</h1>
-        <p class="font"> Get your sh*t done</p>
+  <body>
+    <header class="header">
+      <h1>TO DO</h1>
+      <h2>Get your sh*t done</h2>
     </header>
     <main>
-        <form onsubmit="return false" class="adding-to-do">
-            <input type="text" id="write-to-do" placeholder="Write your stuff here" autocomplete="off">
-            <label for="write-to-do" class="visually-hidden"> To Do eintragen </label>
-            <button id="button-add" class="button-style font">Add</button>
-        </form>
-        <section class="section-1">
-            <h2>LET´S START</h2>
-            <ul class="to-do-list">
+      <form onsubmit="return false" class="adding-to-do">
+        <input
+          type="text"
+          id="write-to-do"
+          class="box-styling"
+          placeholder="Write your stuff here"
+          autocomplete="off"
+        />
+        <label for="write-to-do" class="visually-hidden">
+          To Do eintragen
+        </label>
+        <button id="button-add" class="button-style font">Add</button>
+      </form>
+      <section class="section-1">
+        <h2>LET´S START</h2>
+        <ul class="to-do-list box-styling"></ul>
+      </section>
+      <section>
+        <h2>WANNA SEE ...</h2>
+        <fieldset class="radio-container box-styling">
+          <div>
+            <input
+              type="radio"
+              name="filter"
+              value="all"
+              id="all"
+              class="radio-button"
+            />
+            <label for="all">All</label>
+          </div>
+          <div>
+            <input
+              type="radio"
+              name="filter"
+              value="open"
+              id="open"
+              class="radio-button"
+            />
+            <label for="all">Open</label>
+          </div>
+          <div>
+            <input
+              type="radio"
+              name="filter"
+              value="done"
+              id="done"
+              class="radio-button"
+            />
+            <label for="done">Done</label>
+          </div>
+        </fieldset>
+      </section>
 
-            </ul>
-        </section>
-        <section>
-            <h2>WANNA SEE ...</h2>
-            <fieldset class="radio-container">
-                <div>
-                    <input type="radio" name="filter" value="all" id="all" class="radio-button">
-                    <label for="all">All</label>
-                </div>
-                <div>
-                    <input type="radio" name="filter" value="open" id="open" class="radio-button">
-                    <label for="all">Open</label>
-                </div>
-                <div>
-                    <input type="radio" name="filter" value="done" id="done" class="radio-button">
-                    <label for="done">Done</label>
-                </div>
-            </fieldset>
-
-        </section>
-        <div id="rm-button-container">
-            <button id="button-remove" class="button-style font">Remove stuff done</button>
-        </div>
-
-
+      <button id="button-remove" class="button-style font">
+        Remove stuff done
+      </button>
     </main>
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>

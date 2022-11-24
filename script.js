@@ -130,7 +130,7 @@ function removeToDoDone() {
   arrayToDo = arrayRest;
 
   if (arrayToDo.length < 1) {
-    doList.innerText = "All things done :-) Chill now and have a nice day!";
+    doList.innerText = "All things done 😎 Chill now and have a nice day!";
     doList.classList.add("empty-style");
   } else {
     showToDo(arrayToDo);
